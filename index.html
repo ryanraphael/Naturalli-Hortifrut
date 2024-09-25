@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalli Hortifrut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <nav>
+  </div>
+  <div class="nav-links">
+    <a href="#logo-container">Início</a>
+    <a href="#product-categories">Produtos</a>
+    <a href="#highlight-products">Sobre</a>
+  </div>
+  </div>
+</nav>
+
+
+    <!-- Adicionar logo no topo -->
+    <header>
+        <section id="logo-container">
+        <div class="logo-container">
+            <img src="img.logo.jpeg" alt="Logo Naturalli Hortifrut" class="logo">
+        </div>
+        <h1>Bem-vindo à Naturalli Hortifrut</h1>
+        <p>O melhor lugar para você encontrar produtos frescos e saudáveis!</p>
+    </header>
+</section>
+
+    <!-- Produtos destacados -->
+    <section id="highlight-products">
+        <h2>Destaques</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="mg.hortfrut.jpeg" alt="Hortifrut">
+                <p><strong>Hortifrut</strong></p>
+                <p>Deliciosas Frutas Frescas e Saborosas.</p>
+            </div>
+            <div class="image-card">
+                <img src="img. salada de frutas e sucos.jpg" alt="Sucos Naturais e salada de Frutas">
+                <p><strong>Sucos Naturais e salada de Frutas</strong></p>
+                <p>Sucos Naturais e salada de Frutas, em diversos sabores.</p>
+            </div>
+            <div class="image-card">
+                <img src="img.legumes.jfif" alt="Hortfrt Legumes">
+                <p><strong>Hortfrt Legumes</strong></p>
+                <p>Variedade de Legumes todos os gostos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisão de produtos por categoria -->
+    <section id="product-categories">
+        <h2>Categorias de Produtos</h2>
+        <div class="category">
+            <h3>Frutas</h3>
+            <div class="product">
+                <img src="img.maçamordida.jpeg" alt="Maçã">
+                <p><strong>Maçã</strong></p>
+                <p>Maçãs frescas e crocantes.</p>
+                <input type="number" id="maça-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Maçã', 5, 'maça-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="img.banana.jfif" alt="Banana">
+                <p><strong>Banana</strong></p>
+                <p>Bananas maduras e doces.</p>
+                <input type="number" id="banana-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Banana', 3, 'banana-qty')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="category">
+            <h3>Legumes</h3>
+            <div class="product">
+                <img src="img.alface.jfif" alt="Alface">
+                <p><strong>Alface</strong></p>
+                <p>Alface fresca e crocante.</p>
+                <input type="number" id="alface-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Alface', 4, 'alface-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="img.tomate.jfif" alt="Tomate">
+                <p><strong>Tomate</strong></p>
+                <p>Tomates suculentos e saborosos.</p>
+                <input type="number" id="tomate-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Tomate', 6, 'tomate-qty')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="category">
+            <h3>Sucos</h3>
+            <div class="product">
+                <img src="img.vitamina.jpeg" alt="Vitamina">
+                <p><strong>Vitamina</strong></p>
+                <p>Vitamina natural.</p>
+                <input type="number" id="Vitamina-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Vitamina', 5, 'vitamina-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="img.sucos.jpeg" alt="Sucos">
+                <p><strong>Sucos</strong></p>
+                <p>Sucos natural.</p>
+                <input type="number" id="sucos-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Sucos', 5, 'sucos-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="img.salada de fruta.jpeg" alt="Salada de frutas">
+                <p><strong>Salada de frutas</strong></p>
+                <p>Salada de frutas natural.</p>
+                <input type="number" id="Salada de frutas-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Salada de frutas', 5, 'Salada de frutas-qty')">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <div id="cart-container" class="hidden">
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p class="cart-total"><strong>Total:</strong> R$ <span id="total-price">0.00</span></p>
+        <div class="cart-actions">
+            <button id="clear-cart" onclick="limparCarrinho()">Limpar Carrinho</button>
+            <button id="checkout-button">Finalizar Compra</button>
+        </div>
+    
+        <!-- Formas de Pagamento, visíveis ao finalizar a compra -->
+        <section id="payment-options" class="hidden">
+            <h3>Formas de Pagamento</h3>
+            <ul>
+                <li><input type="radio" name="payment" value="credit-card"> Cartão de Crédito/Débito</li>
+                <li><input type="radio" name="payment" value="pix"> Pix (Pagamento por QR Code)</li>
+                <li><input type="radio" name="payment" value="boleto"> Boleto Bancário</li>
+                <li><input type="radio" name="payment" value="transfer"> Transferência Bancária</li>
+                <li><input type="radio" name="payment" value="cash"> Pagamento na Entrega (Dinheiro)</li>
+            </ul>
+        </section>
+    </div>    
+
+    <!-- Autor do site -->
+    <footer>
+        <p>Site desenvolvido por <strong>Zoinho</strong></p>
+        <p>Nos siga nas redes sociais:
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+            <a href="#" target="_blank">Twitter</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
