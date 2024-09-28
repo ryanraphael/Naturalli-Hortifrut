@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalli Hortifrut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <nav>
+  </div>
+  <div class="nav-links">
+    <a href="#logo-container">Início</a>
+    <a href="#product">Produtos</a>
+    <a href="#highlight-products">Sobre</a>
+    <a href="#dicas contra o desperdício de alimentos">Dicas</a>
+  </div>
+</nav>
+    <!-- Adicionar logo no topo -->
+    <header>
+        <section id="logo-container">
+        <div class="logo-container">
+            <img src="img.logo.jpeg" alt="Logo Naturalli Hortifrut" class="logo">
+        </div>
+        <h1>Bem-vindo à Naturalli Hortifrut</h1>
+        <p>O melhor lugar para você encontrar produtos frescos e saudáveis!</p>
+    </header>
+</section>
+
+    <!-- Produtos destacados -->
+    <section id="highlight-products">
+        <h2>Destaques</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="mg.hortfrut.jpeg" alt="Hortifrut">
+                <p><strong>Hortifrut</strong></p>
+                <p>Deliciosas Frutas Frescas e Saborosas.</p>
+            </div>
+            <div class="image-card">
+                <img src="img. salada de frutas e sucos.jpg" alt="Sucos Naturais e salada de Frutas">
+                <p><strong>Sucos Naturais e salada de Frutas</strong></p>
+                <p>Sucos Naturais e salada de Frutas, em diversos sabores.</p>
+            </div>
+            <div class="image-card">
+                <img src="img.legumes.jfif" alt="Hortfrt Legumes">
+                <p><strong>Hortfrt Legumes</strong></p>
+                <p>Variedade de Legumes todos os gostos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisão de produtos por categoria -->
+    <section id="product">
+        <h2>Frutas</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="img.maçamordida.jpeg" alt="maça">
+                <p><strong>Maça</strong></p>
+                <p>Maçãs frescas e crocantes.</p>
+                <input type="number" id="maça-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Maçã', 5, 'maça-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.banana.jfif" alt="maça">
+                <p><strong>Banana</strong></p>
+                <p>Bananas maduras e doces.</p>
+                <input type="number" id="banana-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Banana', 3, 'banana-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.morango.jpg" alt="morango">
+                <p><strong>Morango</strong></p>
+                <p>Morangos frescos e saborosos.</p>
+                <input type="number" id="morango-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Morango', 5, 'morango-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.manga.jfif" alt="manga">
+                <p><strong>Manga verde</strong></p>
+                <p>Mangas frescas e saborosas.</p>
+                <input type="number" id="manga-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Manga', 5, 'manga-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.goiaba.jfif" alt="goiaba">
+                <p><strong>Goiaba</strong></p>
+                <p>Goiabas frescas, crocantes e saborosas.</p>
+                <input type="number" id="goiaba-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Goiaba', 5, 'goiaba-qty')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+    <section id="product">
+        <h2>Legumes</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="img.tomate.jfif" alt="tomate">
+                <p><strong>Tomate</strong></p>
+                <p>Tomates suculentos e saborosos.</p>
+                <input type="number" id="tomate-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('tomate', 5, 'tomate-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.alface.jfif" alt="alface">
+                <p><strong>Alface</strong></p>
+                <p>Alfaces suculentos e saborosos.</p>
+                <input type="number" id="alface-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Alface', 5, 'alface-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.cenoura.jfif" alt="cenoura">
+                <p><strong>Cenoura</strong></p>
+                <p>Cenouras suculentas e saborosas.</p>
+                <input type="number" id="cenoura-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Cenoura', 5, 'cenoura-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.abobora.jfif" alt="abóbora">
+                <p><strong>Abóbora</strong></p>
+                <p>Abóboras suculentas e saborosas.</p>
+                <input type="number" id="Abóbora-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Abóbora', 5, 'Abóbora-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.batata.jfif" alt="batata">
+                <p><strong>Batata</strong></p>
+                <p>Batatas suculentas e saborosas.</p>
+                <input type="number" id="batata-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Batata', 5, 'batata-qty')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+    <section id="product">
+        <h2>Sucos</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="img.vitamina.jpeg" alt="vitamina">
+                <p><strong>Vitamina</strong></p>
+                <p>Vitaminas Naturais.</p>
+                <input type="number" id="vitamina-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('vitamina', 5, 'vitamina-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.sucos.jpeg" alt="suco">
+                <p><strong>Suco</strong></p>
+                <p>Sucos Naturais.</p>
+                <input type="number" id="suco-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('suco', 5, 'suco-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.chá.jfif" alt="chá">
+                <p><strong>Chá</strong></p>
+                <p>Chá Natural.</p>
+                <input type="number" id="chá" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Chá', 5, 'chá-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.whey.webp" alt="whey">
+                <p><strong>Whey</strong></p>
+                <p>Proteina concentrada.</p>
+                <input type="number" id="whey-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('Whey', 5, 'whey-qty')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="image-card">
+                <img src="img.salada de fruta.jpeg" alt="salada de fruta">
+                <p><strong>Salada de fruta</strong></p>
+                <p>Salada de frutas natural.</p>
+                <input type="number" id="salada de fruta-qty" min="1" value="1">
+                <button onclick="adicionarAoCarrinhoMultiplos('salada de fruta', 5, 'salada de fruta-qty')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+   <section id="dicas contra o desperdício de alimentos">
+        <h2>Receitas contra o desperdício de alimentos</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="img.compota de casca de melão.jpeg" alt="Doce">
+                <p><strong>Compota de casca de melão</strong></p>
+                <p>Modo de preparo: Lave muito bem as cascas de melão. Corte em cubinhos, coloque em uma panela com a água e cozinhe por cerca de 15 minutos. Acrescente o açúcar e deixe cozinhar até ficar transparente e engrossar um pouco a calda. Retire do fogo e sirva frio acompanhando sorvetes.</p>
+                <p>Ingredientes:
+                    1kg de casca de melão
+                    2 xícaras (chá) de água
+                    2 xícaras (chá) de açúcar</p>
+                <p>Tempo: 40min</p>
+            </div>
+            <div class="image-card">
+                <img src="img.bolo da casca da maça.jpeg" alt="Bolo de casca de maça">
+                <p><strong>Bolo de casca de maça</strong></p>
+                <p>Modo de preparo:
+                    Coloque em uma tigela a farinha e o fermento e reserve. No liquidificador, bata o restante dos ingredientes e misture com a farinha reservada. Coloque em uma fôrma de buraco no meio de 26cm de diâmetro untada e polvilhada com açúcar e canela em pó a gosto. Leve ao forno médio, preaquecido, por 30 minutos ou até que ao enfiar um palito, ele saia limpo. Retire do forno, deixe descansar por 5m, desenforme e polvilhe com açúcar e canela em pó a gosto.</p>
+                <p>Ingredientes:
+                    2 xícaras (chá) de farinha de trigo
+                    1 colher (sopa) de fermento em pó
+                    2 xícaras (chá) de açúcar
+                    1 xícara (chá) de óleo
+                    1 colher (sopa) de canela em pó
+                    1 xícara (chá) de leite
+                    3 ovos
+                    Casca de 4 maçãs
+                    1 pitada de sal
+                    Margarina para untar
+                    Açúcar e canela a gosto para polvilhar</p>
+                <p>Tempo: 1h (+5min de descanso)</p>
+            </div>
+            <div class="image-card">
+                <img src="img.bolinho de casca de batata.jpeg" alt="bolinho de casca de batata">
+                <p><strong>Bolinho de casca de batata</strong></p>
+                <p>Modo de preparo
+                    Bata no liquidificador a casca com o leite até homogeneizar.
+                    
+                    Despeje em uma tigela e misture com o espinafre, a cebola, o queijo, os ovos, sal e pimenta.
+                    
+                    Junte o fermento e a farinha, aos poucos, mexendo até desgrudar da lateral da tigela.
+                    
+                    Frite colheradas da massa em óleo quente, aos poucos, até dourar.
+                    
+                    Escorra sobre papel-toalha e sirva.</p>
+                <p>Ingredientes:
+                    2 xícaras (chá) de casca de batata cozida e escorrida
+                    1/2 xícara (chá) de leite
+                    1/2 xícara (chá) de espinafre cozido, espremido e picado
+                    4 colheres (sopa) de cebola ralada
+                    4 colheres (sopa) de queijo parmesão ralado
+                    2 ovos
+                    Sal e pimenta-do-reino a gosto
+                    1 colher (chá) de fermento em pó
+                    2 xícaras (chá) de farinha de trigo (aproximadamente)
+                    Óleo para fritar</p>
+                <p>Tempo: 50min</p>
+            </div>
+            <div class="image-card">
+                <img src="img.salada e casca de abobra.jpeg" alt="Salada e casca de abobra">
+                <p><strong>Salada de casca de abobra</strong></p>
+                <p>Modo de preparo:
+                    Cozinhe a casca da abóbora até ficar macia, escorra e deixe esfriar. Em um refratário, misture a casca escorrida, o tomate, a cenoura e a cebola. Tempere com o azeite, o limão, sal e orégano a gosto e misture bem. Leve à geladeira até a hora de servir.</p>
+                <p>Ingredientes:
+                    2 xícaras (chá) de casca de abóbora lavada e ralada grossa
+                    1 xícara (chá) de tomate sem semente picado
+                    1 xícara (chá) de cenoura cortada em quadrados pequenos e cozida no bafo
+                    1/2 xícara (chá) de cebola picada
+                    2 colheres (sopa) de azeite
+                    2 colheres (sopa) de suco de limão
+                    Sal e orégano a gosto</p>
+                <p>Tempo: 30min</p>
+            </div>
+            <div class="image-card">
+                <img src="img.doce de casca de laranja.jpeg" alt="Doce de casca de laranja">
+                <p><strong>Doce de casca de laranja</strong></p>
+                <p>Modo de preparo:
+                    Descasque as laranjas bem fino, mantendo o máximo da parte branca intacta. Corte a laranja em gomos e retire a polpa. Deixe as cascas de molho em água por 24 horas trocando a água 4 vezes. Escorra, enxugue e fatie as cascas em tiras finas. Leve-as ao fogo médio, cobertas com água, e ferva por 15 minutos. Escorra. Leve novamente ao fogo médio com o açúcar, a canela e o cravo e cozinhe por 15 minutos ou até a casca amaciar. Deixe esfriar e sirva em seguida.</p>
+                <p>Ingredientes:
+                    6 laranjas grandes de casca grossa tipo laranja-baiana
+                    1 e 1/2 xícara (chá) de açúcar
+                    1 canela em pau
+                    5 cravos-da-índia inteiros</p>
+                <p>Tempo: 30min (+24h de molho)</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <div id="cart-container" class="hidden">
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p class="cart-total"><strong>Total:</strong> R$ <span id="total-price">0.00</span></p>
+        <div class="cart-actions">
+            <button id="clear-cart" onclick="limparCarrinho()">Limpar Carrinho</button>
+            <button id="checkout-button">Finalizar Compra</button>
+        </div>
+    
+        <!-- Formas de Pagamento, visíveis ao finalizar a compra -->
+        <section id="payment-options" class="hidden">
+            <h3>Formas de Pagamento</h3>
+            <ul>
+                <li><input type="radio" name="payment" value="credit-card"> Cartão de Crédito/Débito</li>
+                <li><input type="radio" name="payment" value="pix"> Pix (Pagamento por QR Code)</li>
+                <li><input type="radio" name="payment" value="boleto"> Boleto Bancário</li>
+                <li><input type="radio" name="payment" value="transfer"> Transferência Bancária</li>
+                <li><input type="radio" name="payment" value="cash"> Pagamento na Entrega (Dinheiro)</li>
+            </ul>
+        </section>
+    </div>    
+
+    <!-- Autor do site -->
+    <footer>
+        <p>Site desenvolvido por <strong>Zoinho</strong></p>
+        <p>Nos siga nas redes sociais:
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+            <a href="#" target="_blank">Twitter</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
